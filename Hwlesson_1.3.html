@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+        let math_expression_1 = 10 + 10 + "10"; //результатом выражения будет "2010" т.к. сначало мы складываем 10 и 10 затем происходит конкатенация и результатом выржания будет строка 
+        let math_expression_2 = 10 + "10" + 10; //результатом выражения будет "101010" т.к. все операнды преведутся к строке. Опять же конкатенация.
+        let math_expression_3 = 10 + 10 + +"10"; // результатом выражения будет 30 т.к. используется унарный плюс который приводит строку в число.
+        let math_expression_4 = 10 / -""; // результатом выражения будет -Infinity т.к. испульзуется унаруный оператор, пустая строка получит значение -0 (Вот тут у меня вопрос , как такое вобще возможно.Как 0 может получить значение - и при этом его можно делить?)
+        let math_expression_5 = 10 / +"2,5"; //результатом выражения будет NaN из за того что стоит запятая +"2,5" не получается коректно привести к число. 
+        console.log(math_expression_1);
+        console.log(math_expression_2);
+        console.log(math_expression_3);
+        console.log(math_expression_4);
+        console.log(math_expression_5);
+    </script>
+</body>
+
+</html>
